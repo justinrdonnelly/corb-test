@@ -24,6 +24,6 @@ How to use Corb Test
         -  ```$module-params``` A map of parameters (declared external variables) for the process module (besides ```$URI```)
         -  ```$uris``` The URIs to run through the process module
 
-Take a look at the example to see Corb Test in action.
+Take a look at the example to see Corb Test in action (note that the selector module, process module and test module are all in the example directory; obviously that's not realistic).
 
 Use Corb Test as you see fit.  If your selector simply returns all the URIs in the database, testing it doesn't buy you much.  However, if it executes a complicated query, and you want to be sure it's right, it should be tested.  Corb Test has proved helpful for me on my project, but I'm sure there is room for improvement.  PRs welcome!
