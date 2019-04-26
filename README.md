@@ -16,13 +16,13 @@ How to use Corb Test
         -  ```$excluded-uris``` URIs that are expected not to be returned (it's a good idea to seed your DB with some of these)
         -  ```$additional-param-count``` The number of additional parameters returned from the selector module (passed to the process module) (this is required, and must be correct)
         -  ```$additional-expected-params``` Additional parameters returned from the selector module to verify (optional)
+    - In some cases, you may want to execute ```corb:run-selector-and-return-results``` (with the following parameters)
+        -  ```$module-path``` The path to the selector module
+        -  ```$module-params``` A map of parameters (declared external variables) for the selector module
     - exectue ```corb:run-process``` with the following parameters to test your process module (this returns whatever your process module returns)
         -  ```$module-path``` The path to the process module
         -  ```$module-params``` A map of parameters (declared external variables) for the process module (besides ```$URI```)
         -  ```$uris``` The URIs to run through the process module
-    - In some cases, you may want to execute ```corb:run-selector-and-return-results``` (with the following parameters)
-        -  ```$module-path``` The path to the selector module
-        -  ```$module-params``` A map of parameters (declared external variables) for the selector module
 
 Take a look at the example to see Corb Test in action.
 
