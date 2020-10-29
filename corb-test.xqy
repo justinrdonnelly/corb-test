@@ -33,7 +33,7 @@ declare function corb:run-selector(
     $module-path,
     $module-params
   )
-  let $uris := fn:subsequence($results, 2 + $additional-param-count) (: drop count of URIs as well as additional parms :)
+  let $uris := fn:subsequence($results, 2 + $additional-param-count) ! xs:string(.) (: drop count of URIs as well as additional parms and convert to strings (corb returns results as strings) :)
   let $count := $results[1 + $additional-param-count]
   let $params := fn:subsequence($results, 1, $additional-param-count)
   return (
